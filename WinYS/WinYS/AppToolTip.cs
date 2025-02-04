@@ -3,9 +3,9 @@
 // ※このプログラムはSrcMakerForApplicationMessageにより自動的に生成されました。(fj)
 //
 // Inport File :
-//		D:\client\DotNet4.6_YMGLib5\Yoshidaseiho\_doc\AppToolTip.xlsx
+//		D:\client\DotNet4.6_YMGLib5\YoshidaSeiho\_doc\AppToolTip.xlsx
 // Template File :
-//		D:\client\DotNet4.6_YMGLib5\Yoshidaseiho\_doc\AppToolTip.cs.template
+//		D:\client\DotNet4.6_YMGLib5\YoshidaSeiho\_doc\AppToolTip.cs.template
 //
 
 using System;

@@ -1,9 +1,9 @@
-ï»¿
+
 //
-// â€»ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯DBAutoProperties2Access2000ã«ã‚ˆã‚Šè‡ªå‹•çš„ã«ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚(fj)
+// ¦‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍDBAutoProperties2Access2000‚É‚æ‚è©“®“I‚É¶¬‚³‚ê‚Ü‚µ‚½B(fj)
 //
 // MDB File :
-//		D:\client\DotNet4.6_YMGLib5\Yoshidaseiho\WinYS\WinYS\bin\Debug\system\Data.mdb
+//		D:\client\DotNet4.6_YMGLib5\YoshidaSeiho\WinYS\WinYS\bin\Debug\system\Data.mdb
 //
 
 using System;
@@ -16,17 +16,17 @@ using ComponentIO;
 namespace App
 {
 	/// <summary>
-	/// [ä½œæˆè€… fj]
-	/// ãƒ†ãƒ¼ãƒ–ãƒ«ç·¨é›†ã®éš›ã«ä½¿ã†ã‚¯ãƒ©ã‚¹ã§ã™ã€‚
+	/// [ì¬Ò fj]
+	/// ƒe[ƒuƒ‹•ÒW‚ÌÛ‚Ég‚¤ƒNƒ‰ƒX‚Å‚·B
 	/// </summary>
 	public partial class k_SuitochoSeisan : FieldProp
 	{
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[Access é«˜é€Ÿæ¤œç´¢ç”¨]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Access ‚‘¬ŒŸõ—p]B
 		/// </summary>
 		public const string FID_Auto = "ID_Auto";
 		/// <summary>
-		/// Access é«˜é€Ÿæ¤œç´¢ç”¨
+		/// Access ‚‘¬ŒŸõ—p
 		/// </summary>
 		public int ID_Auto
 		{
@@ -35,7 +35,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// Access é«˜é€Ÿæ¤œç´¢ç”¨ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Access ‚‘¬ŒŸõ—pBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? ID_Auto_Null
 		{
@@ -44,11 +44,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å‡ºç´å¸³æ¸…ç®—ID]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[o”[’ ´ZID]B
 		/// </summary>
 		public const string FID_SuitochoSeisan = "ID_SuitochoSeisan";
 		/// <summary>
-		/// å‡ºç´å¸³æ¸…ç®—ID
+		/// o”[’ ´ZID
 		/// </summary>
 		public int ID_SuitochoSeisan
 		{
@@ -57,7 +57,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å‡ºç´å¸³æ¸…ç®—IDã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// o”[’ ´ZIDBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? ID_SuitochoSeisan_Null
 		{
@@ -66,11 +66,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å‡ºç´å¸³ID]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[o”[’ ID]B
 		/// </summary>
 		public const string FID_Suitocho = "ID_Suitocho";
 		/// <summary>
-		/// å‡ºç´å¸³ID
+		/// o”[’ ID
 		/// </summary>
 		public int ID_Suitocho
 		{
@@ -79,7 +79,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å‡ºç´å¸³IDã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// o”[’ IDBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? ID_Suitocho_Null
 		{
@@ -88,11 +88,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[æ—¥ä»˜]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[“ú•t]B
 		/// </summary>
 		public const string FSuitocho_SeisanDate = "Suitocho_SeisanDate";
 		/// <summary>
-		/// æ—¥ä»˜
+		/// “ú•t
 		/// </summary>
 		public DateTime Suitocho_SeisanDate
 		{
@@ -101,7 +101,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// æ—¥ä»˜ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// “ú•tBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public DateTime? Suitocho_SeisanDate_Null
 		{
@@ -110,11 +110,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å–å¼•å†…å®¹]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[æˆø“à—e]B
 		/// </summary>
 		public const string FSuitocho_SeisanTorihiki = "Suitocho_SeisanTorihiki";
 		/// <summary>
-		/// å–å¼•å†…å®¹
+		/// æˆø“à—e
 		/// </summary>
 		public string Suitocho_SeisanTorihiki
 		{
@@ -123,7 +123,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å–å¼•å†…å®¹ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// æˆø“à—eBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public string Suitocho_SeisanTorihiki_Null
 		{
@@ -132,11 +132,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[é‡‘é¡]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[‹àŠz]B
 		/// </summary>
 		public const string FSuitocho_SeisanCost = "Suitocho_SeisanCost";
 		/// <summary>
-		/// é‡‘é¡
+		/// ‹àŠz
 		/// </summary>
 		public decimal Suitocho_SeisanCost
 		{
@@ -145,7 +145,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// é‡‘é¡ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ‹àŠzBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public decimal? Suitocho_SeisanCost_Null
 		{
@@ -154,11 +154,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å†…æ¶ˆè²»ç¨]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[“àÁ”ïÅ]B
 		/// </summary>
 		public const string FSuitocho_SeisanShohizei = "Suitocho_SeisanShohizei";
 		/// <summary>
-		/// å†…æ¶ˆè²»ç¨
+		/// “àÁ”ïÅ
 		/// </summary>
 		public decimal Suitocho_SeisanShohizei
 		{
@@ -167,7 +167,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å†…æ¶ˆè²»ç¨ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// “àÁ”ïÅBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public decimal? Suitocho_SeisanShohizei_Null
 		{
@@ -176,11 +176,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[ãƒ¡ãƒ¢]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[ƒƒ‚]B
 		/// </summary>
 		public const string FSuitocho_SeisanMemo = "Suitocho_SeisanMemo";
 		/// <summary>
-		/// ãƒ¡ãƒ¢
+		/// ƒƒ‚
 		/// </summary>
 		public string Suitocho_SeisanMemo
 		{
@@ -189,7 +189,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ¡ãƒ¢ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ƒƒ‚BSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public string Suitocho_SeisanMemo_Null
 		{
@@ -199,15 +199,15 @@ namespace App
 		
 		#region *** Constructor ***
 		/// <summary>
-		/// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		/// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		/// </summary>
-		/// <param name="o">ç·¨é›†ã™ã‚‹è¡Œã®DataRowã€DataRowViewã€DBViewã®ã©ã‚Œã‹ã€‚DBViewã®å ´åˆã€ç¾åœ¨æŒ‡ã—ã¦ã„ã‚‹è¡Œã®ãƒ‡ãƒ¼ã‚¿ã«ãªã‚Šã¾ã™ã€‚</param>
+		/// <param name="o">•ÒW‚·‚és‚ÌDataRowADataRowViewADBView‚Ì‚Ç‚ê‚©BDBView‚Ìê‡AŒ»İw‚µ‚Ä‚¢‚és‚Ìƒf[ƒ^‚É‚È‚è‚Ü‚·B</param>
 		public k_SuitochoSeisan(object o) : base(o) {}
 		#endregion
 		/// <summary>
-		/// k_SuitochoSeisan å‹ã®ç©ºãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä½œæˆã—ã€è¿”ã—ã¾ã™ã€‚
+		/// k_SuitochoSeisan Œ^‚Ì‹óƒe[ƒuƒ‹‚ğì¬‚µA•Ô‚µ‚Ü‚·B
 		/// </summary>
-		/// <returns>k_SuitochoSeisan å‹ã®ç©ºãƒ†ãƒ¼ãƒ–ãƒ«</returns>
+		/// <returns>k_SuitochoSeisan Œ^‚Ì‹óƒe[ƒuƒ‹</returns>
 		public static DataTable GetTable()
 		{
 			DataTable	dt = new DataTable("k_SuitochoSeisan");

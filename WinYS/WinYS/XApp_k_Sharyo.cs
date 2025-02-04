@@ -1,9 +1,9 @@
-ï»¿
+
 //
-// â€»ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯DBAutoProperties2Access2000ã«ã‚ˆã‚Šè‡ªå‹•çš„ã«ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚(fj)
+// ¦‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍDBAutoProperties2Access2000‚É‚æ‚è©“®“I‚É¶¬‚³‚ê‚Ü‚µ‚½B(fj)
 //
 // MDB File :
-//		D:\client\DotNet4.6_YMGLib5\Yoshidaseiho\WinYS\WinYS\bin\Debug\system\Data.mdb
+//		D:\client\DotNet4.6_YMGLib5\YoshidaSeiho\WinYS\WinYS\bin\Debug\system\Data.mdb
 //
 
 using System;
@@ -16,17 +16,17 @@ using ComponentIO;
 namespace App
 {
 	/// <summary>
-	/// [ä½œæˆè€… fj]
-	/// ãƒ†ãƒ¼ãƒ–ãƒ«ç·¨é›†ã®éš›ã«ä½¿ã†ã‚¯ãƒ©ã‚¹ã§ã™ã€‚
+	/// [ì¬Ò fj]
+	/// ƒe[ƒuƒ‹•ÒW‚ÌÛ‚Ég‚¤ƒNƒ‰ƒX‚Å‚·B
 	/// </summary>
 	public partial class k_Sharyo : FieldProp
 	{
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[Access é«˜é€Ÿæ¤œç´¢ç”¨]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Access ‚‘¬ŒŸõ—p]B
 		/// </summary>
 		public const string FID_Auto = "ID_Auto";
 		/// <summary>
-		/// Access é«˜é€Ÿæ¤œç´¢ç”¨
+		/// Access ‚‘¬ŒŸõ—p
 		/// </summary>
 		public int ID_Auto
 		{
@@ -35,7 +35,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// Access é«˜é€Ÿæ¤œç´¢ç”¨ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Access ‚‘¬ŒŸõ—pBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? ID_Auto_Null
 		{
@@ -44,11 +44,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[è»Šä¸¡ID]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Ô—¼ID]B
 		/// </summary>
 		public const string FID_Sharyo = "ID_Sharyo";
 		/// <summary>
-		/// è»Šä¸¡ID
+		/// Ô—¼ID
 		/// </summary>
 		public int ID_Sharyo
 		{
@@ -57,7 +57,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// è»Šä¸¡IDã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Ô—¼IDBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? ID_Sharyo_Null
 		{
@@ -66,11 +66,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[è»Šå]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Ô–¼]B
 		/// </summary>
 		public const string FSharyo_Name = "Sharyo_Name";
 		/// <summary>
-		/// è»Šå
+		/// Ô–¼
 		/// </summary>
 		public string Sharyo_Name
 		{
@@ -79,7 +79,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// è»Šåã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Ô–¼BSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public string Sharyo_Name_Null
 		{
@@ -88,11 +88,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[ç®¡ç†ç•ªå·]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[ŠÇ—”Ô†]B
 		/// </summary>
 		public const string FSharyo_KanriNumber = "Sharyo_KanriNumber";
 		/// <summary>
-		/// ç®¡ç†ç•ªå·
+		/// ŠÇ—”Ô†
 		/// </summary>
 		public int Sharyo_KanriNumber
 		{
@@ -101,7 +101,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ç®¡ç†ç•ªå·ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ŠÇ—”Ô†BSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_KanriNumber_Null
 		{
@@ -110,11 +110,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å‹å¼]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Œ^®]B
 		/// </summary>
 		public const string FSharyo_Katashiki = "Sharyo_Katashiki";
 		/// <summary>
-		/// å‹å¼
+		/// Œ^®
 		/// </summary>
 		public string Sharyo_Katashiki
 		{
@@ -123,7 +123,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å‹å¼ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Œ^®BSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public string Sharyo_Katashiki_Null
 		{
@@ -132,11 +132,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[ç¨®åˆ¥]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[í•Ê]B
 		/// </summary>
 		public const string FSharyo_Shubetsu = "Sharyo_Shubetsu";
 		/// <summary>
-		/// ç¨®åˆ¥
+		/// í•Ê
 		/// </summary>
 		public string Sharyo_Shubetsu
 		{
@@ -145,7 +145,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ç¨®åˆ¥ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// í•ÊBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public string Sharyo_Shubetsu_Null
 		{
@@ -154,11 +154,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[è»Šä½“å½¢çŠ¶]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Ô‘ÌŒ`ó]B
 		/// </summary>
 		public const string FSharyo_ShataiKejo = "Sharyo_ShataiKejo";
 		/// <summary>
-		/// è»Šä½“å½¢çŠ¶
+		/// Ô‘ÌŒ`ó
 		/// </summary>
 		public string Sharyo_ShataiKejo
 		{
@@ -167,7 +167,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// è»Šä½“å½¢çŠ¶ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Ô‘ÌŒ`óBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public string Sharyo_ShataiKejo_Null
 		{
@@ -176,11 +176,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[ç™»éŒ²ç•ªå·]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[“o˜^”Ô†]B
 		/// </summary>
 		public const string FSharyo_TorokuNumber = "Sharyo_TorokuNumber";
 		/// <summary>
-		/// ç™»éŒ²ç•ªå·
+		/// “o˜^”Ô†
 		/// </summary>
 		public int Sharyo_TorokuNumber
 		{
@@ -189,7 +189,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ç™»éŒ²ç•ªå·ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// “o˜^”Ô†BSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_TorokuNumber_Null
 		{
@@ -198,11 +198,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[ãƒªãƒ¼ã‚¹ä¾¡æ ¼ï¼ˆç¨è¾¼ï¼‰]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[ƒŠ[ƒX‰¿ŠiiÅj]B
 		/// </summary>
 		public const string FSharyo_Cost = "Sharyo_Cost";
 		/// <summary>
-		/// ãƒªãƒ¼ã‚¹ä¾¡æ ¼ï¼ˆç¨è¾¼ï¼‰
+		/// ƒŠ[ƒX‰¿ŠiiÅj
 		/// </summary>
 		public decimal Sharyo_Cost
 		{
@@ -211,7 +211,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒªãƒ¼ã‚¹ä¾¡æ ¼ï¼ˆç¨è¾¼ï¼‰ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ƒŠ[ƒX‰¿ŠiiÅjBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public decimal? Sharyo_Cost_Null
 		{
@@ -220,11 +220,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[æ¸›ä¾¡å„Ÿå´è²»]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Œ¸‰¿‹p”ï]B
 		/// </summary>
 		public const string FSharyo_Genka = "Sharyo_Genka";
 		/// <summary>
-		/// æ¸›ä¾¡å„Ÿå´è²»
+		/// Œ¸‰¿‹p”ï
 		/// </summary>
 		public decimal Sharyo_Genka
 		{
@@ -233,7 +233,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// æ¸›ä¾¡å„Ÿå´è²»ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Œ¸‰¿‹p”ïBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public decimal? Sharyo_Genka_Null
 		{
@@ -242,11 +242,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[ç™»éŒ²æ—¥]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[“o˜^“ú]B
 		/// </summary>
 		public const string FSharyo_DateToroku = "Sharyo_DateToroku";
 		/// <summary>
-		/// ç™»éŒ²æ—¥
+		/// “o˜^“ú
 		/// </summary>
 		public DateTime Sharyo_DateToroku
 		{
@@ -255,7 +255,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ç™»éŒ²æ—¥ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// “o˜^“úBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public DateTime? Sharyo_DateToroku_Null
 		{
@@ -264,11 +264,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[è»Šæ¤œæœ‰åŠ¹æœŸé™]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[ÔŒŸ—LŒøŠúŒÀ]B
 		/// </summary>
 		public const string FSharyo_DateKigen = "Sharyo_DateKigen";
 		/// <summary>
-		/// è»Šæ¤œæœ‰åŠ¹æœŸé™
+		/// ÔŒŸ—LŒøŠúŒÀ
 		/// </summary>
 		public DateTime Sharyo_DateKigen
 		{
@@ -277,7 +277,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// è»Šæ¤œæœ‰åŠ¹æœŸé™ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ÔŒŸ—LŒøŠúŒÀBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public DateTime? Sharyo_DateKigen_Null
 		{
@@ -286,11 +286,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[è‡ªè³ è²¬ä¿é™º é–‹å§‹æ—¥]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[©”…Ó•ÛŒ¯ ŠJn“ú]B
 		/// </summary>
 		public const string FSharyo_DateFrom = "Sharyo_DateFrom";
 		/// <summary>
-		/// è‡ªè³ è²¬ä¿é™º é–‹å§‹æ—¥
+		/// ©”…Ó•ÛŒ¯ ŠJn“ú
 		/// </summary>
 		public DateTime Sharyo_DateFrom
 		{
@@ -299,7 +299,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// è‡ªè³ è²¬ä¿é™º é–‹å§‹æ—¥ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ©”…Ó•ÛŒ¯ ŠJn“úBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public DateTime? Sharyo_DateFrom_Null
 		{
@@ -308,11 +308,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[è‡ªè³ è²¬ä¿é™º çµ‚äº†æ—¥]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[©”…Ó•ÛŒ¯ I—¹“ú]B
 		/// </summary>
 		public const string FSharyo_DateTo = "Sharyo_DateTo";
 		/// <summary>
-		/// è‡ªè³ è²¬ä¿é™º çµ‚äº†æ—¥
+		/// ©”…Ó•ÛŒ¯ I—¹“ú
 		/// </summary>
 		public DateTime Sharyo_DateTo
 		{
@@ -321,7 +321,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// è‡ªè³ è²¬ä¿é™º çµ‚äº†æ—¥ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ©”…Ó•ÛŒ¯ I—¹“úBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public DateTime? Sharyo_DateTo_Null
 		{
@@ -330,11 +330,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[“Y•tƒtƒ@ƒCƒ‹]B
 		/// </summary>
 		public const string FSharyo_File = "Sharyo_File";
 		/// <summary>
-		/// æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«
+		/// “Y•tƒtƒ@ƒCƒ‹
 		/// </summary>
 		public string Sharyo_File
 		{
@@ -343,7 +343,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// “Y•tƒtƒ@ƒCƒ‹BSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public string Sharyo_File_Null
 		{
@@ -352,11 +352,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[è»Šä¸¡æƒ…å ±è©³ç´°]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Ô—¼î•ñÚ×]B
 		/// </summary>
 		public const string FSharyo_Joho = "Sharyo_Joho";
 		/// <summary>
-		/// è»Šä¸¡æƒ…å ±è©³ç´°
+		/// Ô—¼î•ñÚ×
 		/// </summary>
 		public string Sharyo_Joho
 		{
@@ -365,7 +365,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// è»Šä¸¡æƒ…å ±è©³ç´°ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Ô—¼î•ñÚ×BSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public string Sharyo_Joho_Null
 		{
@@ -374,11 +374,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[ç”¨é€”]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[—p“r]B
 		/// </summary>
 		public const string FSharyo_Yoto = "Sharyo_Yoto";
 		/// <summary>
-		/// ç”¨é€”
+		/// —p“r
 		/// </summary>
 		public string Sharyo_Yoto
 		{
@@ -387,7 +387,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ç”¨é€”ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// —p“rBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public string Sharyo_Yoto_Null
 		{
@@ -396,11 +396,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[ä¹—è»Šå®šå“¡]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[æÔ’èˆõ]B
 		/// </summary>
 		public const string FSharyo_Teiin = "Sharyo_Teiin";
 		/// <summary>
-		/// ä¹—è»Šå®šå“¡
+		/// æÔ’èˆõ
 		/// </summary>
 		public int Sharyo_Teiin
 		{
@@ -409,7 +409,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ä¹—è»Šå®šå“¡ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// æÔ’èˆõBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_Teiin_Null
 		{
@@ -418,11 +418,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[æœ€å¤§ç©è¼‰é‡]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Å‘åÏÚ—Ê]B
 		/// </summary>
 		public const string FSharyo_Sekisai = "Sharyo_Sekisai";
 		/// <summary>
-		/// æœ€å¤§ç©è¼‰é‡
+		/// Å‘åÏÚ—Ê
 		/// </summary>
 		public int Sharyo_Sekisai
 		{
@@ -431,7 +431,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// æœ€å¤§ç©è¼‰é‡ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Å‘åÏÚ—ÊBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_Sekisai_Null
 		{
@@ -440,11 +440,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[è»Šä¸¡é‡é‡]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Ô—¼d—Ê]B
 		/// </summary>
 		public const string FSharyo_Weight = "Sharyo_Weight";
 		/// <summary>
-		/// è»Šä¸¡é‡é‡
+		/// Ô—¼d—Ê
 		/// </summary>
 		public int Sharyo_Weight
 		{
@@ -453,7 +453,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// è»Šä¸¡é‡é‡ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Ô—¼d—ÊBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_Weight_Null
 		{
@@ -462,11 +462,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[è»Šä¸¡ç·é‡é‡]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Ô—¼‘d—Ê]B
 		/// </summary>
 		public const string FSharyo_TotalWeight = "Sharyo_TotalWeight";
 		/// <summary>
-		/// è»Šä¸¡ç·é‡é‡
+		/// Ô—¼‘d—Ê
 		/// </summary>
 		public int Sharyo_TotalWeight
 		{
@@ -475,7 +475,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// è»Šä¸¡ç·é‡é‡ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Ô—¼‘d—ÊBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_TotalWeight_Null
 		{
@@ -484,11 +484,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[é•·ã•]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[’·‚³]B
 		/// </summary>
 		public const string FSharyo_Length = "Sharyo_Length";
 		/// <summary>
-		/// é•·ã•
+		/// ’·‚³
 		/// </summary>
 		public int Sharyo_Length
 		{
@@ -497,7 +497,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// é•·ã•ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ’·‚³BSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_Length_Null
 		{
@@ -506,11 +506,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å¹…]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[•]B
 		/// </summary>
 		public const string FSharyo_Width = "Sharyo_Width";
 		/// <summary>
-		/// å¹…
+		/// •
 		/// </summary>
 		public int Sharyo_Width
 		{
@@ -519,7 +519,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å¹…ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// •BSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_Width_Null
 		{
@@ -528,11 +528,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[é«˜ã•]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[‚‚³]B
 		/// </summary>
 		public const string FSharyo_Height = "Sharyo_Height";
 		/// <summary>
-		/// é«˜ã•
+		/// ‚‚³
 		/// </summary>
 		public int Sharyo_Height
 		{
@@ -541,7 +541,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// é«˜ã•ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ‚‚³BSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_Height_Null
 		{
@@ -550,11 +550,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å‰å¾Œè»¸é‡]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[‘OŒã²d]B
 		/// </summary>
 		public const string FSharyo_Zenko = "Sharyo_Zenko";
 		/// <summary>
-		/// å‰å¾Œè»¸é‡
+		/// ‘OŒã²d
 		/// </summary>
 		public int Sharyo_Zenko
 		{
@@ -563,7 +563,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å‰å¾Œè»¸é‡ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ‘OŒã²dBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_Zenko_Null
 		{
@@ -572,11 +572,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å‰å‰è»¸é‡]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[‘O‘O²d]B
 		/// </summary>
 		public const string FSharyo_Zenzen = "Sharyo_Zenzen";
 		/// <summary>
-		/// å‰å‰è»¸é‡
+		/// ‘O‘O²d
 		/// </summary>
 		public int Sharyo_Zenzen
 		{
@@ -585,7 +585,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å‰å‰è»¸é‡ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ‘O‘O²dBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_Zenzen_Null
 		{
@@ -594,11 +594,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å¾Œå¾Œè»¸é‡]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[ŒãŒã²d]B
 		/// </summary>
 		public const string FSharyo_Koko = "Sharyo_Koko";
 		/// <summary>
-		/// å¾Œå¾Œè»¸é‡
+		/// ŒãŒã²d
 		/// </summary>
 		public int Sharyo_Koko
 		{
@@ -607,7 +607,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å¾Œå¾Œè»¸é‡ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ŒãŒã²dBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_Koko_Null
 		{
@@ -616,11 +616,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å¾Œå‰è»¸é‡]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[Œã‘O²d]B
 		/// </summary>
 		public const string FSharyo_Kozen = "Sharyo_Kozen";
 		/// <summary>
-		/// å¾Œå‰è»¸é‡
+		/// Œã‘O²d
 		/// </summary>
 		public int Sharyo_Kozen
 		{
@@ -629,7 +629,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å¾Œå‰è»¸é‡ã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// Œã‘O²dBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public int? Sharyo_Kozen_Null
 		{
@@ -638,11 +638,11 @@ namespace App
 		}
 		
 		/// <summary>
-		/// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[å‚™è€ƒ]ã€‚
+		/// ƒtƒB[ƒ‹ƒh[”õl]B
 		/// </summary>
 		public const string FSharyo_Memo = "Sharyo_Memo";
 		/// <summary>
-		/// å‚™è€ƒ
+		/// ”õl
 		/// </summary>
 		public string Sharyo_Memo
 		{
@@ -651,7 +651,7 @@ namespace App
 		}
 		
 		/// <summary>
-		/// å‚™è€ƒã€‚System.DBNull.Value ã®å ´åˆ null ã‚’ç¤ºã—ã¾ã™ã€‚
+		/// ”õlBSystem.DBNull.Value ‚Ìê‡ null ‚ğ¦‚µ‚Ü‚·B
 		/// </summary>
 		public string Sharyo_Memo_Null
 		{
@@ -661,15 +661,15 @@ namespace App
 		
 		#region *** Constructor ***
 		/// <summary>
-		/// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		/// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		/// </summary>
-		/// <param name="o">ç·¨é›†ã™ã‚‹è¡Œã®DataRowã€DataRowViewã€DBViewã®ã©ã‚Œã‹ã€‚DBViewã®å ´åˆã€ç¾åœ¨æŒ‡ã—ã¦ã„ã‚‹è¡Œã®ãƒ‡ãƒ¼ã‚¿ã«ãªã‚Šã¾ã™ã€‚</param>
+		/// <param name="o">•ÒW‚·‚és‚ÌDataRowADataRowViewADBView‚Ì‚Ç‚ê‚©BDBView‚Ìê‡AŒ»İw‚µ‚Ä‚¢‚és‚Ìƒf[ƒ^‚É‚È‚è‚Ü‚·B</param>
 		public k_Sharyo(object o) : base(o) {}
 		#endregion
 		/// <summary>
-		/// k_Sharyo å‹ã®ç©ºãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä½œæˆã—ã€è¿”ã—ã¾ã™ã€‚
+		/// k_Sharyo Œ^‚Ì‹óƒe[ƒuƒ‹‚ğì¬‚µA•Ô‚µ‚Ü‚·B
 		/// </summary>
-		/// <returns>k_Sharyo å‹ã®ç©ºãƒ†ãƒ¼ãƒ–ãƒ«</returns>
+		/// <returns>k_Sharyo Œ^‚Ì‹óƒe[ƒuƒ‹</returns>
 		public static DataTable GetTable()
 		{
 			DataTable	dt = new DataTable("k_Sharyo");

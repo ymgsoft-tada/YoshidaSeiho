@@ -64,6 +64,7 @@
     <Compile Include="AppFormFuncKey.cs" />
     <Compile Include="AppFunctionKey.cs" />
     <Compile Include="AppGlobal.cs" />
+    <Compile Include="AppKamoku.cs" />
     <Compile Include="AppSuitocho.cs" />
     <Compile Include="AppKintone.cs" />
     <Compile Include="AppKeiyakuDaicho.cs" />
@@ -76,12 +77,6 @@
     </Compile>
     <Compile Include="DlgSplash2.Designer.cs">
       <DependentUpon>DlgSplash2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBg_Progress.cs">
       <SubType>Form</SubType>
@@ -140,11 +135,9 @@
     <Compile Include="XApp_k_SuitochoSeisan.cs" />
     <Compile Include="XApp_TableProp.cs" />
     <Compile Include="XApp_t_basic.cs" />
+    <Compile Include="XApp_t_kamoku.cs" />
     <EmbeddedResource Include="DlgSplash2.resx">
       <DependentUpon>DlgSplash2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBg_Progress.resx">
       <DependentUpon>FormBg_Progress.cs</DependentUpon>
