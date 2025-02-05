@@ -43,7 +43,7 @@ namespace App
             this.apiToken   = token;
             this.appId      = appId;
             httpClient = new HttpClient();
-			httpClient.DefaultRequestHeaders.Add("X-Cybozu-API-Token", this.apiToken);
+			httpClient.DefaultRequestHeaders.Add("X-Cybozu-API-Token", string.Join(",", this.apiToken));
         }
 
         /// <summary>
