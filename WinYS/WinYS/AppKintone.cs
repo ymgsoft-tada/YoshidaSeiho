@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,12 @@ namespace App
 
 		/// <summary>各アプリの情報</summary>
 		Dictionary<eKintoneID, KintoneAP> apps;
+
+		/// <summary>ユーザー情報リスト</summary>
+		List<KintoneUser> users;
+
+		/// <summary>組織情報リスト</summary>
+		List<KintoneOrganization> soshiki;
 
 		/// <summary>
 		/// 顧客管理
@@ -110,31 +117,91 @@ namespace App
 			FormBg_Progress prog = new FormBg_Progress();
 			prog.TitleText = "しばらくお待ちください。";
 			prog.LabelText = "データを取得しています。";
-			prog.DoWorkEvent += prog_DoWorkEventAll;
+			prog.DoWorkEvent += prog_FetchAll;
 			prog.ShowDialog();
 			prog.Dispose();
 		
 		}
 
-		private void prog_DoWorkEventAll(object sender, System.ComponentModel.DoWorkEventArgs e)
+		private void prog_FetchAll(object sender, System.ComponentModel.DoWorkEventArgs e)
 		{
 			FormBg_Progress prog = (FormBg_Progress)sender;
 
 			int cnt = 0;
+
+			Stopwatch sw = new Stopwatch();
+			sw.Start();
+
+			const int TimeOut = 5000;
 
 			foreach (var kvp in apps)
 			{
 				kvp.Value.Fetch();
 				cnt++;
 
-				while(!kvp.Value.FetchDone)
+				while(!kvp.Value.DoneFetch)
 				{
-					// 取得完了通知がくるまで待つ
+					// タイムアウト時間まで、取得完了通知がくるまで待つ
+					if (sw.ElapsedMilliseconds > TimeOut) 
+					{
+						ErrLog.WriteLine($"×Fetch Timeout {kvp.Key}");
+						break;
+					}
 				}
 
+				sw.Restart();
 				prog.SetProgress(cnt / apps.Count*100);
 			}
+
+			// ユーザー情報と組織情報の取得
+			fetchUserSoshiki();
+
+			while(!DoneFethUsers)
+			{
+				// タイムアウト時間まで取得を待つ
+				if (sw.ElapsedMilliseconds > TimeOut) 
+				{
+					ErrLog.WriteLine("×Fetch Timeout Users");
+					break;
+				}
+			}
+
+			sw.Stop();
 		}
+
+		bool DoneFethUsers = false;
+
+		/// <summary>
+		/// ユーザー情報と組織情報を取得します。
+		/// </summary>
+		async void fetchUserSoshiki()
+		{
+			DoneFethUsers = false;
+
+			KintoneApiClient kpc = new KintoneApiClient(SubDomain,"tada@ymgnet.co.jp", "ymgH0171");
+			users	= await kpc.GetAllUsersAsync();
+			if (users != null)
+			{
+				AppLog.WriteLine("●Fetch Succeed Users");
+			}
+			else
+			{
+				AppLog.WriteLine("×Fetch Failed Users");
+			}
+
+			soshiki = await kpc.GetAllOrganizationsAsync();
+			if (soshiki != null)
+			{
+				AppLog.WriteLine("●Fetch Succeed Organization");
+			}
+			else
+			{
+				AppLog.WriteLine("×Fetch Failed Organization");
+			}
+
+			DoneFethUsers = true;
+		}
+
 
 		/// <summary>
 		/// 指定したアプリIDのデータを取得します。
@@ -147,15 +214,6 @@ namespace App
 				apps[kid].Fetch();
 			}
 		}
-	}
-
-	/// <summary>
-	/// Kintoneのユーザー選択情報を管理するクラス
-	/// </summary>
-	public class KintoneUser
-	{
-		public string Code { get; set; }
-		public string Name { get; set; }
 	}
 
 	/// <summary>
@@ -178,7 +236,7 @@ namespace App
 		// Kintone用API
 		KintoneApiClient kpc;
 
-		public bool FetchDone = false;
+		public bool DoneFetch = false;
 
 		/// <summary>
 		/// コンストラクタ
@@ -188,7 +246,7 @@ namespace App
 			AppName = appname;
 			AppID	= appid;
 
-			kpc = new KintoneApiClient(AppKintone.SubDomain, $"{(int)appid}", token.ToList());
+			kpc = new KintoneApiClient(AppKintone.SubDomain, token.ToList(), $"{(int)appid}");
 		}
 
 		/// <summary>
@@ -198,7 +256,7 @@ namespace App
 		{
 			try
 			{
-				FetchDone = false;
+				DoneFetch = false;
 
 				// 非同期で全レコードを取得
 				List<JObject> allRecords = await kpc.GetAllRecordsAsync();
@@ -214,7 +272,7 @@ namespace App
 
 				AppLog.WriteLine($"●Succeed JSON To DataTable　ID:{(int)AppID}");
 
-				FetchDone = true;
+				DoneFetch = true;
 			}
 			catch (Exception ex)
 			{

@@ -24,6 +24,11 @@ namespace App
         string baseUrl;
         /// <summary>アプリケーションID</summary>
         string appId;
+        /// <summary>Basic認証ユーザー</summary>
+        string base_user;
+        /// <summary>Basic認証ユーザーパスワード</summary>
+        string base_pass;
+
         /// <summary>APIトークン</summary>
         List<string> apiToken;
         /// <summary>SUBTABLEの親ID</summary>
@@ -32,18 +37,134 @@ namespace App
         public const string Fld_SubID    = "Fld_SubID";
 
         /// <summary>
-        /// コンストラクタ
+        /// コンストラクタ（APIトークン用）
         /// </summary>
         /// <param name="sub_domain">サブドメイン</param>
         /// <param name="appId">アプリケーションID</param>
-        /// <param name="apiToken">認証用トークン</param>
-        public KintoneApiClient(string sub_domain, string appId, List<string> token)
+        /// <param name="token">認証用トークン</param>
+        public KintoneApiClient(string sub_domain,  List<string> token = null, string appId = null)
         {
             this.baseUrl    = $"https://{sub_domain}.cybozu.com";
-            this.apiToken   = token;
             this.appId      = appId;
+
+            if (token == null)
+            {
+                this.apiToken = new List<string>();
+            }
+            else
+            {
+                this.apiToken = token;
+            }
+
             httpClient = new HttpClient();
-			httpClient.DefaultRequestHeaders.Add("X-Cybozu-API-Token", string.Join(",", this.apiToken));
+            setHttpHeadersForToken();
+        }
+
+        /// <summary>
+        /// コンストラクタ（Basic認証用）
+        /// </summary>
+        /// <param name="sub_domain">サブドメイン</param>
+        /// <param name="appId">アプリケーションID</param>
+        /// <param name="basicUser">ユーザー名</param>
+        /// <param name="basicPass">パスワード</param>
+        public KintoneApiClient(string sub_domain, string basicUser = null, string basicPass = null, string appId = null)
+        {
+            this.baseUrl    = $"https://{sub_domain}.cybozu.com";
+            this.appId      = appId;
+
+            this.base_user = basicUser;
+            this.base_pass = basicPass;
+
+            httpClient = new HttpClient();
+            setHttpHeadersForBasic();
+        }
+
+        /// <summary>
+        /// APIトークン認証用のヘッダを設定します。
+        /// </summary>
+        void setHttpHeadersForToken()
+        {
+            string str = string.Join(",", apiToken);
+
+            if (httpClient != null)
+            {
+                httpClient.DefaultRequestHeaders.Clear();
+                httpClient.DefaultRequestHeaders.Add("X-Cybozu-API-Token", str);
+            }
+        }
+
+        /// <summary>
+        /// Basic認証用のヘッダを設定します。
+        /// </summary>
+        void setHttpHeadersForBasic()
+        {
+            if (httpClient != null)
+            {
+                string auth = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{this.base_user}:{this.base_pass}"));
+
+                httpClient.DefaultRequestHeaders.Clear();
+                httpClient.DefaultRequestHeaders.Add("X-Cybozu-Authorization", auth);
+            }
+        }
+
+        /// <summary>
+        /// ユーザー情報一覧を取得します。
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<KintoneUser>> GetAllUsersAsync()
+        {
+            try
+            {
+                var url = $"{baseUrl}/v1/users.json";
+                var response = await httpClient.GetAsync(url);
+                var body = await response.Content.ReadAsStringAsync();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonResponse = JObject.Parse(body);
+                    return JsonConvert.DeserializeObject<List<KintoneUser>>(jsonResponse["users"].ToString());
+                }
+                else
+                {
+                    Console.WriteLine($"Error fetching users: {response.StatusCode} - {response.ReasonPhrase}");
+                    return new List<KintoneUser>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return new List<KintoneUser>();
+            }
+        }
+
+        /// <summary>
+        /// 組織情報一覧を取得します。
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<KintoneOrganization>> GetAllOrganizationsAsync()
+        {
+            try
+            {
+                var url = $"{baseUrl}/v1/organizations.json";
+                var response = await httpClient.GetAsync(url);
+                var body = await response.Content.ReadAsStringAsync();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonResponse = JObject.Parse(body);
+                    return JsonConvert.DeserializeObject<List<KintoneOrganization>>(jsonResponse["organizations"].ToString());
+                }
+                else
+                {
+                    Console.WriteLine($"Error fetching organizations: {response.StatusCode} - {response.ReasonPhrase}");
+                    return new List<KintoneOrganization>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return new List<KintoneOrganization>();
+            }
         }
 
         /// <summary>
@@ -461,5 +582,35 @@ namespace App
 
             return (mainTbl,subTbls);
         }
+    }
+
+    /// <summary>
+    /// Kintoneのユーザーデータを管理するクラス
+    /// </summary>
+    public class KintoneUser
+    {
+        /// <summary>ユーザーコード (ログインID)</summary>
+        public string Code { get; set; }
+        /// <summary>ユーザー名</summary>
+        public string Name { get; set; }
+        /// <summary>メールアドレス</summary>
+        public string Email { get; set; }
+        /// <summary>言語</summary>
+        public string Language { get; set; }
+        /// <summary>タイムゾーン</summary>
+        public string Timezone { get; set; }
+    }
+
+    /// <summary>
+    /// Kintoneの組織データを管理するクラス
+    /// </summary>
+    public class KintoneOrganization
+    {
+        /// <summary>組織ID</summary>
+        public string Id { get; set; }
+        /// <summary>組織名</summary>
+        public string Name { get; set; }
+        /// <summary>親組織のID</summary>
+        public string Parent {get; set; }
     }
 }
